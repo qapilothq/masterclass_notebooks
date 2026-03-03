@@ -1,0 +1,36 @@
+# Environment and secrets
+.env
+.env.local
+.venv
+venv
+env
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+.eggs/
+dist/
+build/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# IDE / editor
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Optional: uncomment to ignore generated test outputs
+# test_cases_simple/
+# test_cases_with_context/
+# test_cases_from_graph/
