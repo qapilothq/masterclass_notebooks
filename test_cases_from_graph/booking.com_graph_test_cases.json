@@ -1,12 +1,11 @@
 [
-  "Given the user is on the Home screen\nWhen the user launches the app\nThen the user should see options to search for hotels, motels, vacation rentals, and more",
-  "Given the user is on the Home screen\nWhen the user taps on the search bar\nThen the user should be able to enter a city, attraction, landmark, or hotel name to search for accommodations",
-  "Given the user is on the Home screen\nWhen the user taps on the filter icon\nThen the user should see filtering options such as price, review score, WiFi quality, and other important amenities",
-  "Given the user is on the Home screen\nWhen the user scrolls through the daily deals section\nThen the user should see daily deals for various accommodations with free cancellation and no booking or credit card fees",
-  "Given the user is on the Home screen\nWhen the user taps on a property listing\nThen the user should see detailed information about the property, including guest reviews, amenities, and booking options",
-  "Given the user is on the Home screen\nWhen the user taps on the 'My Account' icon\nThen the user should be navigated to the My Account screen where they can manage their bookings and view account details",
-  "Given the user is on the My Account screen\nWhen the user taps on a booking in the list\nThen the user should see the booking details, including check-in times, host contact information, and options to make changes or leave a review",
-  "Given the user is on the My Account screen\nWhen the user taps on the notifications icon\nThen the user should be navigated to the Notifications screen and see a list of recent notifications about their bookings and travel deals",
-  "Given the user is on the My Account screen\nWhen the user taps on the customer service option\nThen the user should be able to contact 24/7 customer service in their preferred language",
-  "Given the user is on the My Account screen\nWhen the user taps on the paperless confirmation option for a booking\nThen the user should see a digital confirmation that can be used at check-in"
+  "Given the user is on the homescreen\nWhen the user taps on the 'My Account' tab\nThen the app navigates to the My Account screen displaying user account information",
+  "Given the user is on the homescreen\nWhen the user taps on the 'Notifications' tab\nThen the app navigates to the Notifications screen showing recent alerts and updates",
+  "Given the user is on the My Account screen\nWhen the user views their account details\nThen the app displays the user's personal information and account settings",
+  "Given the user is on the Notifications screen\nWhen the user scrolls through the notifications list\nThen the app displays all recent notifications and allows the user to view notification details",
+  "Given the user is on the homescreen\nWhen the user scrolls through the main content\nThen the app displays available booking options and featured destinations",
+  "Given the user is on the homescreen\nWhen the user receives a new notification\nThen the notifications badge is updated to reflect the new unread notification",
+  "Given the user is on the My Account screen\nWhen the user taps the back button\nThen the app navigates back to the homescreen",
+  "Given the user is on the Notifications screen\nWhen the user taps the back button\nThen the app navigates back to the homescreen",
+  "Given the user is on the homescreen\nWhen the user taps on a featured destination or offer\nThen the app displays the details of the selected destination or offer"
 ]
