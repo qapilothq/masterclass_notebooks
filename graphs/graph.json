@@ -8,16 +8,16 @@
                 "description": "The home screen of the app."
             },
             {
-                "id": "login",
-                "label": "Login",
-                "description": "The login screen of the app."
+                "id": "account",
+                "label": "My Account",
+                "description": "The my account screen of the app."
             }
         ],
         "edges": [
             {
                 "source": "home",
-                "target": "login",
-                "action": "tap_login"
+                "target": "account",
+                "action": "tap_account"
             }
         ]
     }
