@@ -1,0 +1,7 @@
+[
+  "Given the user is on the Login screen\nWhen the user enters valid credentials and taps the Login button\nThen the user should be navigated to the Home screen",
+  "Given the user is on the Home screen\nWhen the user taps the Notifications icon\nThen the user should be navigated to the Notifications screen and see a list of recent notifications",
+  "Given the user is on the Profile screen\nWhen the user updates their profile picture and saves the changes\nThen the new profile picture should be displayed on the Profile screen",
+  "Given the user is on the Settings screen\nWhen the user toggles the Dark Mode switch\nThen the app's theme should change to dark mode immediately",
+  "Given the user is on the Home screen\nWhen the user pulls down to refresh the content\nThen the latest content should be loaded and displayed on the screen"
+]

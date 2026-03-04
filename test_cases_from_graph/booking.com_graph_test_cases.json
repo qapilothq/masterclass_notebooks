@@ -1,0 +1,12 @@
+[
+  "Given the user is on the Home screen\nWhen the user launches the app\nThen the user should see options to search for hotels, motels, vacation rentals, and more",
+  "Given the user is on the Home screen\nWhen the user taps on the search bar\nThen the user should be able to enter a city, attraction, landmark, or hotel name to search for accommodations",
+  "Given the user is on the Home screen\nWhen the user taps on the filter icon\nThen the user should see filtering options such as price, review score, WiFi quality, and other important amenities",
+  "Given the user is on the Home screen\nWhen the user scrolls through the daily deals section\nThen the user should see daily deals for various accommodations with free cancellation and no booking or credit card fees",
+  "Given the user is on the Home screen\nWhen the user taps on a property listing\nThen the user should see detailed information about the property, including guest reviews, amenities, and booking options",
+  "Given the user is on the Home screen\nWhen the user taps on the 'My Account' icon\nThen the user should be navigated to the My Account screen where they can manage their bookings and view account details",
+  "Given the user is on the My Account screen\nWhen the user taps on a booking in the list\nThen the user should see the booking details, including check-in times, host contact information, and options to make changes or leave a review",
+  "Given the user is on the My Account screen\nWhen the user taps on the notifications icon\nThen the user should be navigated to the Notifications screen and see a list of recent notifications about their bookings and travel deals",
+  "Given the user is on the My Account screen\nWhen the user taps on the customer service option\nThen the user should be able to contact 24/7 customer service in their preferred language",
+  "Given the user is on the My Account screen\nWhen the user taps on the paperless confirmation option for a booking\nThen the user should see a digital confirmation that can be used at check-in"
+]

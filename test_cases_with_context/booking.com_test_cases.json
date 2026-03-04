@@ -1,0 +1,10 @@
+[
+  "Given the user is on the Home screen\nWhen the user taps the notifications bell icon in the top bar\nThen the app navigates to the Notifications screen and displays the latest notifications and alerts",
+  "Given the user is on the Home screen\nWhen the user taps the 'My Account' icon in the bottom navigation bar\nThen the app navigates to the My Account screen and displays the user's profile and account options",
+  "Given the user is on the Notifications screen\nWhen the user pulls down to refresh the notifications list\nThen the app fetches and displays the most recent notifications without duplicating existing items",
+  "Given the user is on the My Account screen and not logged in\nWhen the user taps the 'Sign in' button\nThen the app displays the login form and allows the user to enter credentials",
+  "Given the user is on the Home screen\nWhen the user receives a new notification while the app is open\nThen a badge appears on the notifications bell icon and the notification is visible in the Notifications screen",
+  "Given the user is on the My Account screen and logged in\nWhen the user taps the 'My bookings' option\nThen the app navigates to the Bookings screen and displays the user's current and past bookings",
+  "Given the user is on the Notifications screen\nWhen the user taps on a notification about a booking\nThen the app navigates to the relevant booking details screen for that notification",
+  "Given the user is on the Home screen\nWhen the user taps the 'My Account' icon and then selects 'Settings'\nThen the app navigates to the Settings screen and displays options for managing preferences and notifications"
+]

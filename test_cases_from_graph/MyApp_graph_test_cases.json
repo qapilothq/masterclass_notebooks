@@ -1,0 +1,10 @@
+[
+  "Given the user is on the Home screen\nWhen the user taps on the 'My Account' tab\nThen the app navigates to the My Account screen showing user profile information and account details",
+  "Given the user is on the Home screen\nWhen the user taps on the 'Notifications' tab\nThen the app navigates to the Notifications screen and displays the user's notifications",
+  "Given the user is on the Home screen\nWhen the user taps on the 'Bookings' tab\nThen the app navigates to the Bookings screen and displays the user's current and past bookings",
+  "Given the user is on the My Account screen\nWhen the user updates their profile information and saves changes\nThen the app displays a confirmation message and the updated profile information is shown",
+  "Given the user is on the Notifications screen\nWhen the user taps on a notification\nThen the app displays the notification details or navigates to the related content",
+  "Given the user is on the Bookings screen\nWhen the user taps on a booking entry\nThen the app displays the booking details for the selected booking",
+  "Given the user is on the Home screen\nWhen the user receives a new notification\nThen a notification badge appears on the Notifications tab indicating unread notifications",
+  "Given the user is on the My Account screen\nWhen the user logs out\nThen the app logs the user out and navigates to the login screen"
+]

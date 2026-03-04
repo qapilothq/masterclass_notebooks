@@ -1,0 +1,7 @@
+[
+  "Given the user is on the Home screen\nWhen the user enters 'Paris' in the destination search bar and taps the Search button\nThen the app should display a list of available accommodations in Paris",
+  "Given the user is viewing the search results for 'New York'\nWhen the user applies the 'Free cancellation' filter\nThen only accommodations with free cancellation should be shown in the results",
+  "Given the user is on the Accommodation Details screen for a selected hotel\nWhen the user taps the 'Book Now' button and completes the booking form\nThen the app should confirm the booking and display a booking confirmation screen",
+  "Given the user is on the Home screen and is not logged in\nWhen the user taps the 'Sign In' button and enters valid credentials\nThen the user should be logged in and redirected to the Home screen with their account information displayed",
+  "Given the user is on the Bookings screen with at least one upcoming booking\nWhen the user selects a booking and taps the 'Cancel Booking' button\nThen the app should prompt for confirmation and, upon confirmation, cancel the booking and update the booking status"
+]

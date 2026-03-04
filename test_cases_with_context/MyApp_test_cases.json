@@ -1,0 +1,9 @@
+[
+  "Given the user is on the Home screen\nWhen the user taps the notifications icon in the top bar\nThen the app navigates to the Notifications screen and displays the user's notifications list",
+  "Given the user is on the My Account screen\nWhen the user taps the Edit Profile button\nThen the app displays the Edit Profile form allowing the user to update their account details",
+  "Given the user is on the Bookings screen\nWhen the user taps on a specific booking in the list\nThen the app navigates to the Booking Details screen and displays the details for the selected booking",
+  "Given the user is on the Home screen\nWhen the user receives a new notification while the app is open\nThen a badge appears on the notifications icon and the notification is listed on the Notifications screen",
+  "Given the user is on the My Account screen\nWhen the user scrolls down to view their account information\nThen the app displays the user's name, email, and other profile details correctly",
+  "Given the user is on the Notifications screen\nWhen the user swipes down to refresh the list\nThen the app reloads and displays the most up-to-date notifications for the user",
+  "Given the user is on the Bookings screen\nWhen the user taps the filter or sort option\nThen the app displays filter and sort options and updates the bookings list according to the user's selection"
+]
