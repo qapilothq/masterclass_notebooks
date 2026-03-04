@@ -1,108 +1,55 @@
-# Masterclass Notebook
+# BDD Test Case Generation & LLM-as-Judge
 
-Generate and evaluate **BDD-style (Given/When/Then)** mobile app test cases using an LLM. The project uses OpenAI to produce test scenarios and an LLM-as-judge to score their quality.
+Generate BDD (Given/When/Then) test cases for mobile apps using an LLM, then evaluate their quality with an LLM judge. Three levels of context are compared to show how richer input produces better tests.
 
-## What’s in this repo
+## Notebooks
 
-| File | Description |
-|------|-------------|
-| **test_case_generation.ipynb** | Generates BDD test cases in three ways: from app name only, from app name + context, and from an app screen graph. |
-| **llm_as_judge.ipynb** | Evaluates the three generated test sets with a rubric and returns scores plus a recommendation. |
-| **requirements.txt** | Python dependencies (`ipykernel`, `openai`, `python-dotenv`). |
+| Notebook | Description |
+|---|---|
+| `test_case_generation-BASIC.ipynb` | Starter template — fill in your app details |
+| `test_case_generation-ADVANCED.ipynb` | Complete example using booking.com |
+| `llm_as_judge-BASIC.ipynb` | Evaluation template — define your rubric |
+| `llm_as_judge-ADVANCED.ipynb` | Complete evaluator with a 6-criterion weighted rubric |
+
+## How It Works
+
+Test cases are generated three ways, each producing progressively better results:
+
+1. **Simple** — app name + basic description → saves to `test_cases_simple/`
+2. **With context** — app name + description + screenshots → saves to `test_cases_with_context/`
+3. **From graph** — app name + context + screen graph JSON + screenshots → saves to `test_cases_from_graph/`
+
+The LLM judge then scores all three sets on BDD structure, domain relevance, coverage, clarity, scenario quality, and traceability (1–5 scale).
 
 ## Setup
 
-### 1. Python environment
-
-**Option A: Virtual environment (recommended)**
-
 ```bash
-cd masterclass_notebook
 python3 -m venv .venv
-source .venv/bin/activate   # On Windows: .venv\Scripts\activate
+source .venv/bin/activate      # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-**Option B: Use the existing `.venv`**
+Create a `.env` file:
+```
+OPENAI_API_KEY=your-key-here
+OPENAI_MODEL=gpt-4.1           # optional, defaults to gpt-4.1
+```
 
-If `.venv` already exists, activate it and ensure dependencies are installed:
+Open the notebooks and select the `.venv` kernel.
+
+## Capturing Screenshots (optional)
+
+Screenshots placed in `screenshots/` are automatically included in generation modes 2 and 3.
+
+To capture from a connected Android device via ADB:
 
 ```bash
-source .venv/bin/activate
-pip install -r requirements.txt
+python adb_screenshot.py                   # auto-named with timestamp
+python adb_screenshot.py --name login.png  # custom filename
 ```
 
-### 2. API key
+Requires ADB in PATH and USB debugging enabled on the device.
 
-Create a `.env` file in the project root:
+## App Graph (optional)
 
-```env
-OPENAI_API_KEY=your-openai-api-key-here
-```
-
-Optional (defaults to `gpt-4o-mini` if unset):
-
-```env
-OPENAI_MODEL=gpt-4o
-```
-
-Both notebooks read `OPENAI_API_KEY` (and optionally `OPENAI_MODEL`) from `.env`.
-
-### 3. Jupyter kernel (for running in VS Code / Cursor)
-
-To register the venv as a kernel:
-
-```bash
-.venv/bin/python -m ipykernel install --user --name=masterclass_notebook --display-name="Python (masterclass_notebook)"
-```
-
-Then in your editor, select the interpreter or kernel **Python (masterclass_notebook)** (or the `.venv` interpreter) before running the notebooks.
-
-## Usage
-
-1. **Run `test_case_generation.ipynb`**  
-   - Set `APP_NAME`, `APP_CONTEXT`, and optionally `APP_PACKAGE_NAME` in the first cell.  
-   - Run all cells. This produces:
-     - `test_cases_simple/` — from app name only  
-     - `test_cases_with_context/` — from app name + context  
-     - `test_cases_from_graph/` — from screen graph (uses `app_screen_graph.json` if present, otherwise a demo graph)
-
-2. **Run `llm_as_judge.ipynb`**  
-   - Uses the same `APP_NAME` and `APP_CONTEXT` and reads the JSON files from the three output folders.  
-   - Run all cells to get scores (1–5 per criterion), summaries, and a recommendation.
-
-## Output layout
-
-After running the generation notebook you’ll have:
-
-- `test_cases_simple/<AppName>_test_cases.json`
-- `test_cases_with_context/<AppName>_test_cases.json`
-- `test_cases_from_graph/<AppName>_graph_test_cases.json`
-
-The judge notebook loads these paths automatically based on `APP_NAME`.
-
-## Optional: screen graph
-
-For the “from graph” flow, put an `app_screen_graph.json` in the project root. Example shape:
-
-```json
-{
-  "nodes": [
-    {"id": "home", "label": "Home Screen", "description": "..."},
-    {"id": "login", "label": "Login Screen", "description": "..."}
-  ],
-  "edges": [
-    {"source": "splash", "target": "login", "action": "auto_navigate"},
-    {"source": "login", "target": "home", "action": "tap_login"}
-  ]
-}
-```
-
-If the file is missing, the notebook falls back to a small demo graph.
-
-## Requirements
-
-- Python 3.10+
-- OpenAI API key
-
-See `requirements.txt` for Python packages.
+Place a JSON file describing your app's screen graph at `graphs/MY_APP_graph.json`. Any structure works — nodes/edges, adjacency lists, etc. The graph is stringified and included in the prompt for mode 3 generation.
