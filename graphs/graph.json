@@ -1,0 +1,24 @@
+{
+    "app_name": "MyApp",
+    "app_graph": {
+        "nodes": [
+            {
+                "id": "home",
+                "label": "Home",
+                "description": "The home screen of the app."
+            },
+            {
+                "id": "login",
+                "label": "Login",
+                "description": "The login screen of the app."
+            }
+        ],
+        "edges": [
+            {
+                "source": "home",
+                "target": "login",
+                "action": "tap_login"
+            }
+        ]
+    }
+}
